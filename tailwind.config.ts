@@ -57,6 +57,32 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // LungSense brand colors
+        lungsense: {
+          blue: {
+            DEFAULT: "#005EB4",
+            light: "#D4ECFF",
+            medium: "#035DB4",
+          },
+          red: {
+            DEFAULT: "#E7191F",
+            light: "#FF788F",
+          },
+          green: {
+            DEFAULT: "#5DD586",
+            cyan: "#6CE5E8",
+            dark: "#41B8D5",
+          },
+          yellow: {
+            DEFAULT: "#FFBB5C",
+            light: "#FDF9B4",
+          },
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "DM Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+        display: ["Poppins", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        dm: ["DM Sans", "Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
