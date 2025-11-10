@@ -28,16 +28,17 @@ export default function Index() {
               Lung Health Analysis
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto italic font-display">
-              Some information about the product. Advanced respiratory diagnostics 
-              using cutting-edge AI technology for accurate health assessments.
+              Some information about the product. Advanced respiratory
+              diagnostics using cutting-edge AI technology for accurate health
+              assessments.
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="pt-6">
             <Link to="/select-role">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-lungsense-blue hover:bg-lungsense-blue/90 text-white px-12 py-6 text-lg font-display font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
                 Get Started
@@ -51,27 +52,33 @@ export default function Index() {
               <div className="w-12 h-12 bg-lungsense-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 font-display">X-Ray Analysis</h3>
+              <h3 className="font-semibold text-gray-900 mb-2 font-display">
+                X-Ray Analysis
+              </h3>
               <p className="text-sm text-gray-600">
                 Upload and analyze chest X-rays with AI precision
               </p>
             </div>
-            
+
             <div className="p-6 bg-lungsense-green/10 rounded-lg">
               <div className="w-12 h-12 bg-lungsense-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 font-display">Sound Recording</h3>
+              <h3 className="font-semibold text-gray-900 mb-2 font-display">
+                Sound Recording
+              </h3>
               <p className="text-sm text-gray-600">
                 Record and analyze chest and cough sounds
               </p>
             </div>
-            
+
             <div className="p-6 bg-lungsense-yellow/10 rounded-lg">
               <div className="w-12 h-12 bg-lungsense-yellow rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 font-display">AI Diagnosis</h3>
+              <h3 className="font-semibold text-gray-900 mb-2 font-display">
+                AI Diagnosis
+              </h3>
               <p className="text-sm text-gray-600">
                 Get instant AI-powered health insights
               </p>
@@ -81,9 +88,9 @@ export default function Index() {
           {/* Additional Info */}
           <div className="pt-8 text-sm text-gray-500">
             <p>
-              LungSense uses advanced machine learning models to provide preliminary 
-              health assessments. Always consult with healthcare professionals for 
-              medical advice.
+              LungSense uses advanced machine learning models to provide
+              preliminary health assessments. Always consult with healthcare
+              professionals for medical advice.
             </p>
           </div>
         </div>

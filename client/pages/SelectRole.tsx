@@ -9,7 +9,10 @@ export default function SelectRole() {
       {/* Header */}
       <header className="border-b border-gray-200">
         <div className="container mx-auto px-4 py-4 md:py-6">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <Activity className="w-8 h-8 text-lungsense-blue" />
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight">
               LungSense
@@ -45,10 +48,11 @@ export default function SelectRole() {
                       Patient
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Get AI-powered analysis of your lung health with easy data upload and results tracking
+                      Get AI-powered analysis of your lung health with easy data
+                      upload and results tracking
                     </p>
                   </div>
-                  <Button 
+                  <Button
                     className="w-full bg-lungsense-blue hover:bg-lungsense-blue/90 font-display"
                     size="lg"
                   >
@@ -70,10 +74,11 @@ export default function SelectRole() {
                       Healthcare Practitioner
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Access advanced diagnostic tools and manage patient records with professional-grade features
+                      Access advanced diagnostic tools and manage patient
+                      records with professional-grade features
                     </p>
                   </div>
-                  <Button 
+                  <Button
                     className="w-full bg-lungsense-green hover:bg-lungsense-green/90 font-display"
                     size="lg"
                   >
@@ -86,7 +91,10 @@ export default function SelectRole() {
 
           {/* Back Link */}
           <div className="text-center mt-8">
-            <Link to="/" className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors">
+            <Link
+              to="/"
+              className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors"
+            >
               ← Back to Home
             </Link>
           </div>

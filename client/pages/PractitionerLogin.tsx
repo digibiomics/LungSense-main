@@ -11,7 +11,10 @@ export default function PractitionerLogin() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4 md:py-6">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <Activity className="w-8 h-8 text-lungsense-blue" />
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight">
               LungSense
@@ -31,7 +34,10 @@ export default function PractitionerLogin() {
               </h2>
               <p className="text-sm text-gray-600 font-dm">
                 Don't have an account?{" "}
-                <Link to="/practitioner/signup" className="text-lungsense-blue hover:underline font-medium">
+                <Link
+                  to="/practitioner/signup"
+                  className="text-lungsense-blue hover:underline font-medium"
+                >
                   Sign Up here
                 </Link>
               </p>
@@ -40,7 +46,10 @@ export default function PractitionerLogin() {
             {/* Login Form */}
             <form className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-xs uppercase tracking-wider text-gray-700 font-dm">
+                <Label
+                  htmlFor="name"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm"
+                >
                   N A M E
                 </Label>
                 <Input
@@ -52,7 +61,10 @@ export default function PractitionerLogin() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-xs uppercase tracking-wider text-gray-700 font-dm">
+                <Label
+                  htmlFor="email"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm"
+                >
                   E M A I L
                 </Label>
                 <Input
@@ -64,8 +76,12 @@ export default function PractitionerLogin() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="practitioner-id" className="text-xs uppercase tracking-wider text-gray-700 font-dm">
-                  H E A L T H C A R E&nbsp;&nbsp;P R A C T I O N E R&nbsp;&nbsp;I D
+                <Label
+                  htmlFor="practitioner-id"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm"
+                >
+                  H E A L T H C A R E&nbsp;&nbsp;P R A C T I O N E
+                  R&nbsp;&nbsp;I D
                 </Label>
                 <Input
                   id="practitioner-id"
@@ -76,7 +92,10 @@ export default function PractitionerLogin() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-xs uppercase tracking-wider text-gray-700 font-dm">
+                <Label
+                  htmlFor="password"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm"
+                >
                   P A S S W O R D
                 </Label>
                 <Input
@@ -99,7 +118,10 @@ export default function PractitionerLogin() {
 
           {/* Back Link */}
           <div className="text-center mt-6">
-            <Link to="/select-role" className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors">
+            <Link
+              to="/select-role"
+              className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors"
+            >
               ← Back to role selection
             </Link>
           </div>

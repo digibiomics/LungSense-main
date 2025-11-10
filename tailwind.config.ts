@@ -80,8 +80,26 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "DM Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
-        display: ["Poppins", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        sans: [
+          "Inter",
+          "DM Sans",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+        display: [
+          "Poppins",
+          "Inter",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
         dm: ["DM Sans", "Inter", "sans-serif"],
       },
       borderRadius: {
