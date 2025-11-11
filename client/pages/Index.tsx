@@ -34,17 +34,6 @@ export default function Index() {
             </p>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-6">
-            <Link to="/select-role">
-              <Button
-                size="lg"
-                className="bg-lungsense-blue hover:bg-lungsense-blue/90 text-white px-12 py-6 text-lg font-display font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                Get Started
-              </Button>
-            </Link>
-          </div>
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
@@ -93,6 +82,20 @@ export default function Index() {
               professionals for medical advice.
             </p>
           </div>
+
+          {/* CTA Button */}
+          <div className="pt-6">
+            <Link to="/select-role">
+              <Button
+                size="lg"
+                className="bg-lungsense-blue hover:bg-lungsense-blue/90 text-white px-12 py-6 text-lg font-display font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
+              >
+                Get Started
+              </Button>
+            </Link>
+          </div>
+
+
         </div>
       </main>
 
