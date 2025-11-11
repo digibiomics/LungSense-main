@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import SelectRole from "./pages/SelectRole";
 import PatientLogin from "./pages/PatientLogin";
 import PatientSignup from "./pages/PatientSignup";
+import PatientDashboard from "./pages/PatientDashboard";
+import PatientRecords from "./pages/PatientRecords";
 import PractitionerLogin from "./pages/PractitionerLogin";
 import PractitionerSignup from "./pages/PractitionerSignup";
 import NotFound from "./pages/NotFound";
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/select-role" element={<SelectRole />} />
           <Route path="/patient/login" element={<PatientLogin />} />
           <Route path="/patient/signup" element={<PatientSignup />} />
+          <Route path="/patient/dashboard" element={<PatientDashboard />} />
+          <Route path="/patient/records" element={<PatientRecords />} />
           <Route path="/practitioner/login" element={<PractitionerLogin />} />
           <Route path="/practitioner/signup" element={<PractitionerSignup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
