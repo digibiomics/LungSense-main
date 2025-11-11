@@ -35,7 +35,7 @@ export default function SelectRole() {
           </div>
 
           {/* Role Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
             {/* Patient Card */}
             <Link to="/patient/login">
               <Card className="p-8 hover:shadow-xl transition-all cursor-pointer border-2 hover:border-lungsense-blue group">
