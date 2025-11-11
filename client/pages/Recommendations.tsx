@@ -1,7 +1,17 @@
 import Sidebar from "@/components/Sidebar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Calendar, Maximize2, HeartPulse, Phone, Dumbbell, Pill, Wind, Bell, UserPlus } from "lucide-react";
+import {
+  Calendar,
+  Maximize2,
+  HeartPulse,
+  Phone,
+  Dumbbell,
+  Pill,
+  Wind,
+  Bell,
+  UserPlus,
+} from "lucide-react";
 
 export default function Recommendations() {
   return (
@@ -33,7 +43,10 @@ export default function Recommendations() {
 
           {/* Introduction */}
           <p className="text-gray-400 font-dm mb-8">
-            Following your AI diagnostic report, here are tailored recommendations to guide your next steps towards optimal lung health. These suggestions are designed to support your recovery and long-term well-being.
+            Following your AI diagnostic report, here are tailored
+            recommendations to guide your next steps towards optimal lung
+            health. These suggestions are designed to support your recovery and
+            long-term well-being.
           </p>
 
           {/* Next Steps */}
@@ -51,7 +64,10 @@ export default function Recommendations() {
                       Schedule Follow-up Appointment
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 font-dm">
-                      Your AI diagnostic report indicates a need for further medical review. Please schedule a follow-up with your primary physician or a pulmonologist to discuss the findings.
+                      Your AI diagnostic report indicates a need for further
+                      medical review. Please schedule a follow-up with your
+                      primary physician or a pulmonologist to discuss the
+                      findings.
                     </p>
                     <Button className="bg-white text-gray-900 hover:bg-gray-100 font-display font-medium">
                       Schedule Now
@@ -70,9 +86,15 @@ export default function Recommendations() {
                       Consider Additional Imaging
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 font-dm">
-                      Based on the initial analysis, additional high-resolution CT scans or MRI may provide more detailed insights. Discuss this option with your doctor to determine suitability.
+                      Based on the initial analysis, additional high-resolution
+                      CT scans or MRI may provide more detailed insights.
+                      Discuss this option with your doctor to determine
+                      suitability.
                     </p>
-                    <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-700 font-display font-medium">
+                    <Button
+                      variant="outline"
+                      className="border-gray-600 text-white hover:bg-gray-700 font-display font-medium"
+                    >
                       Learn More
                     </Button>
                   </div>
@@ -83,7 +105,9 @@ export default function Recommendations() {
 
           {/* Triage Advice */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-6 font-display">Triage Advice</h2>
+            <h2 className="text-2xl font-bold mb-6 font-display">
+              Triage Advice
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 bg-gray-800 border-gray-700">
@@ -96,9 +120,14 @@ export default function Recommendations() {
                       Monitor Symptoms Daily
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 font-dm">
-                      Pay close attention to any changes in your breathing, cough frequency, or chest discomfort. Log observations in your personal health journal for your doctor.
+                      Pay close attention to any changes in your breathing,
+                      cough frequency, or chest discomfort. Log observations in
+                      your personal health journal for your doctor.
                     </p>
-                    <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-700 font-display font-medium">
+                    <Button
+                      variant="outline"
+                      className="border-gray-600 text-white hover:bg-gray-700 font-display font-medium"
+                    >
                       Track Symptoms
                     </Button>
                   </div>
@@ -115,9 +144,14 @@ export default function Recommendations() {
                       Emergency Contact Information
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 font-dm">
-                      Keep emergency contacts and the nearest urgent care facility details readily available. Be aware of warning signs that require immediate medical attention.
+                      Keep emergency contacts and the nearest urgent care
+                      facility details readily available. Be aware of warning
+                      signs that require immediate medical attention.
                     </p>
-                    <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-900/20 font-display font-medium">
+                    <Button
+                      variant="outline"
+                      className="border-red-500 text-red-400 hover:bg-red-900/20 font-display font-medium"
+                    >
                       View Details
                     </Button>
                   </div>
@@ -128,7 +162,9 @@ export default function Recommendations() {
 
           {/* Follow-Up Actions */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-6 font-display">Follow-Up Actions</h2>
+            <h2 className="text-2xl font-bold mb-6 font-display">
+              Follow-Up Actions
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="p-6 bg-gradient-to-br from-lungsense-blue/20 to-transparent border-lungsense-blue">
@@ -139,7 +175,9 @@ export default function Recommendations() {
                   Lifestyle Adjustments
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 font-dm">
-                  Adopt a healthier diet rich in antioxidants, engage in moderate physical activity, and prioritize adequate rest to support your body's healing process.
+                  Adopt a healthier diet rich in antioxidants, engage in
+                  moderate physical activity, and prioritize adequate rest to
+                  support your body's healing process.
                 </p>
                 <Button className="w-full bg-lungsense-blue hover:bg-lungsense-blue/90 font-display font-medium">
                   Explore Wellness
@@ -154,9 +192,14 @@ export default function Recommendations() {
                   Medication Adherence
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 font-dm">
-                  If prescribed, ensure consistent and correct intake of all medications. Set reminders and understand potential side effects to maximize treatment effectiveness.
+                  If prescribed, ensure consistent and correct intake of all
+                  medications. Set reminders and understand potential side
+                  effects to maximize treatment effectiveness.
                 </p>
-                <Button variant="outline" className="w-full border-gray-600 text-white hover:bg-gray-700 font-display font-medium">
+                <Button
+                  variant="outline"
+                  className="w-full border-gray-600 text-white hover:bg-gray-700 font-display font-medium"
+                >
                   Set Reminders
                 </Button>
               </Card>
@@ -169,9 +212,14 @@ export default function Recommendations() {
                   Breathing Exercises
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 font-dm">
-                  Incorporate targeted breathing exercises to improve lung capacity and efficiency. Consult with a respiratory therapist for personalized techniques.
+                  Incorporate targeted breathing exercises to improve lung
+                  capacity and efficiency. Consult with a respiratory therapist
+                  for personalized techniques.
                 </p>
-                <Button variant="outline" className="w-full border-gray-600 text-white hover:bg-gray-700 font-display font-medium">
+                <Button
+                  variant="outline"
+                  className="w-full border-gray-600 text-white hover:bg-gray-700 font-display font-medium"
+                >
                   Start Exercises
                 </Button>
               </Card>
@@ -190,7 +238,8 @@ export default function Recommendations() {
                     Regular Check-ups
                   </h3>
                   <p className="text-gray-400 text-sm mb-4 font-dm">
-                    Maintain a schedule of regular medical check-ups to monitor your lung health and detect any changes early.
+                    Maintain a schedule of regular medical check-ups to monitor
+                    your lung health and detect any changes early.
                   </p>
                   <Button className="bg-white text-gray-900 hover:bg-gray-100 font-display font-medium">
                     Plan Check-ups
@@ -210,7 +259,9 @@ export default function Recommendations() {
                 Connect with a Specialist
               </h2>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto font-dm">
-                Get in touch with our network of pulmonologists and respiratory specialists who can provide expert guidance tailored to your condition.
+                Get in touch with our network of pulmonologists and respiratory
+                specialists who can provide expert guidance tailored to your
+                condition.
               </p>
               <Button className="bg-black text-white hover:bg-gray-900 font-display font-semibold px-8 py-6">
                 Book a Tele-Consultation Now

@@ -33,7 +33,10 @@ export default function PatientSignup() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4 md:py-6">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <Activity className="w-8 h-8 text-lungsense-blue" />
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 font-display tracking-tight">
               LungSense
@@ -56,7 +59,10 @@ export default function PatientSignup() {
               </h3>
               <p className="text-sm text-gray-600 mt-4 font-dm">
                 Already have an account?{" "}
-                <Link to="/patient/login" className="text-lungsense-blue hover:underline font-medium">
+                <Link
+                  to="/patient/login"
+                  className="text-lungsense-blue hover:underline font-medium"
+                >
                   Log in here
                 </Link>
               </p>
@@ -66,7 +72,10 @@ export default function PatientSignup() {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
+                  <Label
+                    htmlFor="firstName"
+                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
+                  >
                     F I R S T&nbsp;N A M E
                   </Label>
                   <Input
@@ -82,7 +91,10 @@ export default function PatientSignup() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
+                  <Label
+                    htmlFor="lastName"
+                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
+                  >
                     L A S T&nbsp;N A M E
                   </Label>
                   <Input
@@ -99,7 +111,10 @@ export default function PatientSignup() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
+                <Label
+                  htmlFor="email"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
+                >
                   E M A I L
                 </Label>
                 <Input
@@ -115,7 +130,10 @@ export default function PatientSignup() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
+                <Label
+                  htmlFor="password"
+                  className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
+                >
                   C R E A T E&nbsp;P A S S W O R D
                 </Label>
                 <Input
@@ -132,10 +150,13 @@ export default function PatientSignup() {
 
               <div className="bg-gray-50 p-4 rounded-lg text-xs text-gray-600 text-center">
                 <p className="font-dm">
-                  By Signing Up, You agree to consent to our data collection for 
+                  By Signing Up, You agree to consent to our data collection for
                   <br />
                   research purposes.{" "}
-                  <a href="#" className="text-lungsense-blue hover:underline font-medium">
+                  <a
+                    href="#"
+                    className="text-lungsense-blue hover:underline font-medium"
+                  >
                     Read our privacy policy here
                   </a>
                 </p>
@@ -153,7 +174,10 @@ export default function PatientSignup() {
 
           {/* Back Link */}
           <div className="text-center mt-6">
-            <Link to="/select-role" className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors">
+            <Link
+              to="/select-role"
+              className="text-sm text-gray-600 hover:text-lungsense-blue transition-colors"
+            >
               ← Back to role selection
             </Link>
           </div>

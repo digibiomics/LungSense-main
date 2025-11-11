@@ -1,26 +1,34 @@
 import Sidebar from "@/components/Sidebar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, AlertCircle, CheckCircle2, AlertTriangle } from "lucide-react";
+import {
+  Download,
+  AlertCircle,
+  CheckCircle2,
+  AlertTriangle,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function DiagnosticResults() {
   const diagnosticData = [
     {
       name: "Chronic Obstructive Pulmonary Disease (COPD)",
-      description: "AI detected significant airflow limitation and inflammation.",
+      description:
+        "AI detected significant airflow limitation and inflammation.",
       confidence: 85,
       severity: "high",
     },
     {
       name: "Bacterial Pneumonia",
-      description: "Indications of localized lung infection with fluid accumulation.",
+      description:
+        "Indications of localized lung infection with fluid accumulation.",
       confidence: 65,
       severity: "medium",
     },
     {
       name: "Early Stage Lung Nodules",
-      description: "Small, round-oss nodules identified; further investigation recommended.",
+      description:
+        "Small, round-oss nodules identified; further investigation recommended.",
       confidence: 60,
       severity: "medium",
     },
@@ -76,8 +84,8 @@ export default function DiagnosticResults() {
                         diagnosis.severity === "high"
                           ? "border-red-500"
                           : diagnosis.severity === "medium"
-                          ? "border-yellow-500"
-                          : "border-green-500"
+                            ? "border-yellow-500"
+                            : "border-green-500"
                       }`}
                     >
                       <div className="flex items-start justify-between mb-2">
@@ -89,8 +97,8 @@ export default function DiagnosticResults() {
                             diagnosis.severity === "high"
                               ? "text-red-400"
                               : diagnosis.severity === "medium"
-                              ? "text-yellow-400"
-                              : "text-green-400"
+                                ? "text-yellow-400"
+                                : "text-green-400"
                           }`}
                         >
                           Confidence: {diagnosis.confidence}%
@@ -127,7 +135,11 @@ export default function DiagnosticResults() {
 
                 <Card className="p-6 bg-gray-800 border-gray-700">
                   <p className="text-gray-300 mb-6 font-dm">
-                    Our advanced AI models analyze a multimodal dataset including high-resolution lung CT scans, acoustic patterns from cough and breath sounds, and various clinical and environmental parameters. This integrated approach allows for a holistic understanding of your lung health.
+                    Our advanced AI models analyze a multimodal dataset
+                    including high-resolution lung CT scans, acoustic patterns
+                    from cough and breath sounds, and various clinical and
+                    environmental parameters. This integrated approach allows
+                    for a holistic understanding of your lung health.
                   </p>
 
                   <div className="space-y-6">
@@ -136,7 +148,13 @@ export default function DiagnosticResults() {
                         Scan Analysis
                       </h3>
                       <p className="text-gray-400 text-sm font-dm">
-                        For lung scans, the AI utilizes deep learning algorithms to identify subtle abnormalities, such as nodules, infiltrates, and structural changes indicative of chronic conditions like COPD or fibrosis. Color-coded overlays highlight these areas, with different colors representing varying levels of concern or specific pathological patterns.
+                        For lung scans, the AI utilizes deep learning algorithms
+                        to identify subtle abnormalities, such as nodules,
+                        infiltrates, and structural changes indicative of
+                        chronic conditions like COPD or fibrosis. Color-coded
+                        overlays highlight these areas, with different colors
+                        representing varying levels of concern or specific
+                        pathological patterns.
                       </p>
                     </div>
 
@@ -145,7 +163,11 @@ export default function DiagnosticResults() {
                         Acoustic Biomarkers
                       </h3>
                       <p className="text-gray-400 text-sm font-dm">
-                        Cough and breath sounds are processed using spectral analysis to detect specific acoustic biomarkers associated with respiratory diseases. For instance, the frequency, duration, and timbre of coughs can differentiate between asthma, bronchitis, and pneumonia.
+                        Cough and breath sounds are processed using spectral
+                        analysis to detect specific acoustic biomarkers
+                        associated with respiratory diseases. For instance, the
+                        frequency, duration, and timbre of coughs can
+                        differentiate between asthma, bronchitis, and pneumonia.
                       </p>
                     </div>
 
@@ -154,21 +176,38 @@ export default function DiagnosticResults() {
                         Clinical Data Integration
                       </h3>
                       <p className="text-gray-400 text-sm font-dm">
-                        Finally, clinical inputs such as age, medical history, and environmental exposures are integrated to refine the diagnostic probabilities, ensuring personalized and contextually relevant results. The confidence scores reflect the model's certainty based on the totality of the analyzed data.
+                        Finally, clinical inputs such as age, medical history,
+                        and environmental exposures are integrated to refine the
+                        diagnostic probabilities, ensuring personalized and
+                        contextually relevant results. The confidence scores
+                        reflect the model's certainty based on the totality of
+                        the analyzed data.
                       </p>
 
                       <ul className="mt-4 space-y-2 text-sm text-gray-400">
                         <li className="flex items-start gap-2">
                           <span className="text-lungsense-blue">•</span>
-                          <span><strong>"Feature Extraction:"</strong> Automated identification of key patterns from each data modality.</span>
+                          <span>
+                            <strong>"Feature Extraction:"</strong> Automated
+                            identification of key patterns from each data
+                            modality.
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-lungsense-blue">•</span>
-                          <span><strong>"Ensemble Modeling:"</strong> Combination of multiple AI models for robust and accurate predictions.</span>
+                          <span>
+                            <strong>"Ensemble Modeling:"</strong> Combination of
+                            multiple AI models for robust and accurate
+                            predictions.
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-lungsense-blue">•</span>
-                          <span><strong>"Cross-Referencing:"</strong> Validation of findings across different data types to enhance diagnostic precision.</span>
+                          <span>
+                            <strong>"Cross-Referencing:"</strong> Validation of
+                            findings across different data types to enhance
+                            diagnostic precision.
+                          </span>
                         </li>
                       </ul>
                     </div>
@@ -243,7 +282,9 @@ export default function DiagnosticResults() {
                       Important Notice
                     </h3>
                     <p className="text-gray-300 text-sm font-dm">
-                      This AI analysis is for informational purposes only. Please consult with a healthcare professional for proper medical diagnosis and treatment.
+                      This AI analysis is for informational purposes only.
+                      Please consult with a healthcare professional for proper
+                      medical diagnosis and treatment.
                     </p>
                   </div>
                 </div>

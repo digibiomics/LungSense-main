@@ -48,7 +48,10 @@ export default function PatientRecords() {
           {/* Records List */}
           <div className="grid gap-6">
             {records.map((record) => (
-              <Card key={record.id} className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
+              <Card
+                key={record.id}
+                className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-lungsense-blue-light rounded-lg flex items-center justify-center">
                     <FileText className="w-6 h-6 text-lungsense-blue" />
