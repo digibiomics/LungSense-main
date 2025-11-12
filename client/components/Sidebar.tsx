@@ -10,8 +10,8 @@ export default function Sidebar() {
   const navItems = [
     { icon: Home, label: "Dashboard", href: "/patient/dashboard" },
     { icon: Upload, label: "Upload Data", href: "/patient/dashboard" },
-    { icon: Activity, label: "Monitoring", href: "/patient/records" },
-    { icon: FileText, label: "Reports", href: "/patient/results" },
+    { icon: Activity, label: "Past Records", href: "/patient/records" },
+    { icon: FileText, label: "AI Analysis", href: "/patient/results" },
     { icon: Heart, label: "Recommendations", href: "/patient/recommendations" },
   ];
 

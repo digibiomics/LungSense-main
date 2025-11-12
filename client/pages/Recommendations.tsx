@@ -15,23 +15,23 @@ import {
 
 export default function Recommendations() {
   return (
-    <div className="flex min-h-screen bg-gray-900">
+    <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <main className="flex-1 md:ml-64 bg-gray-900 text-white">
+      <main className="flex-1 md:ml-64 bg-gray-50">
         <div className="p-4 md:p-8 space-y-8 max-w-7xl">
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold font-display">
+            <h1 className="text-3xl md:text-4xl font-bold font-display text-gray-900">
               Personalized Recommendations
             </h1>
             <div className="flex items-center gap-4">
-              <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
-                <Bell className="w-6 h-6" />
+              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <Bell className="w-6 h-6 text-gray-600" />
               </button>
-              <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-lungsense-blue rounded-full flex items-center justify-center">
                 <img
                   src="https://api.dicebear.com/7.x/avataaars/svg?seed=user"
                   alt="User"
@@ -42,7 +42,7 @@ export default function Recommendations() {
           </div>
 
           {/* Introduction */}
-          <p className="text-gray-400 font-dm mb-8">
+          <p className="text-gray-600 font-dm mb-8">
             Following your AI diagnostic report, here are tailored
             recommendations to guide your next steps towards optimal lung
             health. These suggestions are designed to support your recovery and
@@ -51,19 +51,19 @@ export default function Recommendations() {
 
           {/* Next Steps */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 font-display">Next Steps</h2>
+            <h2 className="text-2xl font-bold mb-6 font-display text-gray-900">Next Steps</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="p-6 bg-gray-800 border-gray-700 hover:border-lungsense-blue transition-colors">
+              <Card className="p-6 bg-white border-gray-200 hover:border-lungsense-blue transition-colors shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Calendar className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-lungsense-blue-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Calendar className="w-6 h-6 text-lungsense-blue" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2 font-display">
+                    <h3 className="text-lg font-semibold mb-2 font-display text-gray-900">
                       Schedule Follow-up Appointment
                     </h3>
-                    <p className="text-gray-400 text-sm mb-4 font-dm">
+                    <p className="text-gray-600 text-sm mb-4 font-dm">
                       Your AI diagnostic report indicates a need for further
                       medical review. Please schedule a follow-up with your
                       primary physician or a pulmonologist to discuss the

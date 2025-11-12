@@ -3,14 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Sidebar from "@/components/Sidebar";
+import AIProcessingModal from "@/components/AIProcessingModal";
 import { Upload, Play, Pause, X, AlertCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function PatientDashboard() {
+  const navigate = useNavigate();
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [recordedAudio, setRecordedAudio] = useState<Blob | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const [audioType, setAudioType] = useState<"chest" | "cough">("chest");
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  // AI Processing Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [aiResults, setAiResults] = useState<any>(null);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -31,10 +39,67 @@ export default function PatientDashboard() {
     setIsRecording(!isRecording);
   };
 
+  const handleSubmit = async () => {
+    // Open modal and start processing
+    setIsModalOpen(true);
+    setIsProcessing(true);
+
+    // Simulate AI processing - replace with actual API call
+    setTimeout(() => {
+      setAiResults({
+        diagnostics: [
+          {
+            name: "Chronic Obstructive Pulmonary Disease (COPD)",
+            description: "AI detected significant airflow limitation and inflammation.",
+            confidence: 85,
+            severity: "high",
+          },
+          {
+            name: "Bacterial Pneumonia",
+            description: "Indications of localized lung infection with fluid accumulation.",
+            confidence: 65,
+            severity: "medium",
+          },
+          {
+            name: "Early Stage Lung Nodules",
+            description: "Small, round nodules identified; further investigation recommended.",
+            confidence: 60,
+            severity: "medium",
+          },
+        ],
+        probabilities: [
+          { name: "COPD", value: 85 },
+          { name: "Asthma", value: 78 },
+          { name: "Nodules", value: 60 },
+        ],
+      });
+      setIsProcessing(false);
+    }, 4000);
+  };
+
+  const handleViewResults = () => {
+    setIsModalOpen(false);
+    navigate("/patient/results");
+  };
+
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
       <Sidebar />
+
+      {/* AI Processing Modal */}
+      <AIProcessingModal
+        isOpen={isModalOpen}
+        isProcessing={isProcessing}
+        results={aiResults}
+        onClose={() => {
+          setIsModalOpen(false);
+          // Reset states
+          setUploadedFile(null);
+          setAudioType("chest");
+        }}
+        onViewResults={handleViewResults}
+      />
 
       {/* Main Content */}
       <main className="flex-1 md:ml-64">
@@ -68,7 +133,9 @@ export default function PatientDashboard() {
                     <h3 className="font-semibold text-gray-900 mb-2 font-display">
                       Drag files to upload
                     </h3>
-                    <p className="text-gray-600 text-sm font-dm mb-4">Or</p>
+                    <p className="text-gray-600 text-sm font-dm mb-4">
+                      Or
+                    </p>
                     <Button className="bg-lungsense-blue hover:bg-lungsense-blue/90 font-display font-medium">
                       Browse Files
                     </Button>
@@ -80,8 +147,7 @@ export default function PatientDashboard() {
                       className="hidden"
                     />
                     <p className="text-xs text-gray-500 mt-4 font-dm">
-                      Max File Size Supported:{" "}
-                      <span className="font-bold">50 MB</span>
+                      Max File Size Supported: <span className="font-bold">50 MB</span>
                     </p>
                     <p className="text-xs text-gray-500 mt-2 font-dm">
                       .pdf, .jpg formats accepted
@@ -142,7 +208,7 @@ export default function PatientDashboard() {
                       onClick={toggleRecording}
                       className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
                         isRecording
-                          ? "bg-lungsense-red text-white"
+                          ? "bg-red-500 text-white hover:bg-red-600"
                           : "bg-lungsense-blue text-white hover:bg-lungsense-blue/90"
                       }`}
                     >
@@ -200,10 +266,7 @@ export default function PatientDashboard() {
 
               <form className="space-y-4">
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="ethnicity"
-                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
-                  >
+                  <Label htmlFor="ethnicity" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
                     Ethnicity
                   </Label>
                   <select className="w-full px-3 py-2 border border-gray-300 rounded-lg font-display text-sm focus:ring-2 focus:ring-lungsense-blue focus:border-transparent">
@@ -216,24 +279,14 @@ export default function PatientDashboard() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="age"
-                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
-                  >
+                  <Label htmlFor="age" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
                     Age
                   </Label>
-                  <Input
-                    type="number"
-                    placeholder="25"
-                    className="font-display"
-                  />
+                  <Input type="number" placeholder="25" className="font-display" />
                 </div>
 
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="sex"
-                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
-                  >
+                  <Label htmlFor="sex" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
                     Sex
                   </Label>
                   <select className="w-full px-3 py-2 border border-gray-300 rounded-lg font-display text-sm focus:ring-2 focus:ring-lungsense-blue focus:border-transparent">
@@ -245,32 +298,20 @@ export default function PatientDashboard() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="symptoms"
-                    className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium"
-                  >
+                  <Label htmlFor="symptoms" className="text-xs uppercase tracking-wider text-gray-700 font-dm font-medium">
                     Symptoms
                   </Label>
                   <div className="space-y-2">
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 rounded border-gray-300"
-                      />
+                      <input type="checkbox" className="w-4 h-4 rounded border-gray-300" />
                       <span className="text-sm font-display">Cough</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 rounded border-gray-300"
-                      />
+                      <input type="checkbox" className="w-4 h-4 rounded border-gray-300" />
                       <span className="text-sm font-display">Fever</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 rounded border-gray-300"
-                      />
+                      <input type="checkbox" className="w-4 h-4 rounded border-gray-300" />
                       <span className="text-sm font-display">Fatigue</span>
                     </label>
                   </div>
@@ -284,13 +325,8 @@ export default function PatientDashboard() {
             <div className="flex gap-3">
               <AlertCircle className="w-5 h-5 text-lungsense-blue flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-700 font-dm">
-                <span className="font-semibold">Privacy Notice:</span> We handle
-                your data securely and use it only for medical analysis. Read
-                our{" "}
-                <a
-                  href="#"
-                  className="text-lungsense-blue hover:underline font-medium"
-                >
+                <span className="font-semibold">Privacy Notice:</span> We handle your data securely and use it only for medical analysis. Read our{" "}
+                <a href="#" className="text-lungsense-blue hover:underline font-medium">
                   full privacy policy here
                 </a>
               </div>
@@ -299,10 +335,20 @@ export default function PatientDashboard() {
 
           {/* Submit Button */}
           <div className="flex gap-4">
-            <Button className="bg-gray-300 hover:bg-gray-400 text-gray-700 font-display font-semibold px-8">
+            <Button 
+              onClick={() => {
+                setUploadedFile(null);
+                setAudioType("chest");
+              }}
+              className="bg-gray-300 hover:bg-gray-400 text-gray-700 font-display font-semibold px-8"
+            >
               Clear
             </Button>
-            <Button className="flex-1 bg-lungsense-blue hover:bg-lungsense-blue/90 text-white font-display font-semibold py-6 rounded-lg">
+            <Button 
+              onClick={handleSubmit}
+              disabled={!uploadedFile && !isRecording}
+              className="flex-1 bg-lungsense-blue hover:bg-lungsense-blue/90 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-display font-semibold py-6 rounded-lg"
+            >
               Submit for AI Generated Diagnosis
             </Button>
           </div>
