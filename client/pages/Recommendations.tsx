@@ -51,7 +51,9 @@ export default function Recommendations() {
 
           {/* Next Steps */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 font-display text-gray-900">Next Steps</h2>
+            <h2 className="text-2xl font-bold mb-6 font-display text-gray-900">
+              Next Steps
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 bg-white border-gray-200 hover:border-lungsense-blue transition-colors shadow-sm">

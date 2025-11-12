@@ -50,7 +50,7 @@ export default function PractitionerPatients() {
   const filteredPatients = patients.filter(
     (patient) =>
       patient.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      patient.email.toLowerCase().includes(searchTerm.toLowerCase())
+      patient.email.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const handleViewRecords = (patient: PatientRecord) => {
@@ -130,7 +130,9 @@ export default function PractitionerPatients() {
                             Last Analysis
                           </p>
                           <p className="text-sm text-gray-900 font-display">
-                            {new Date(patient.lastAnalysis).toLocaleDateString()}
+                            {new Date(
+                              patient.lastAnalysis,
+                            ).toLocaleDateString()}
                           </p>
                         </div>
                         <div>
@@ -147,7 +149,7 @@ export default function PractitionerPatients() {
                           </p>
                           <span
                             className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border capitalize ${getStatusColor(
-                              patient.status
+                              patient.status,
                             )}`}
                           >
                             {patient.status}

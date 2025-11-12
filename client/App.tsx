@@ -42,8 +42,14 @@ const App = () => (
           />
           <Route path="/practitioner/login" element={<PractitionerLogin />} />
           <Route path="/practitioner/signup" element={<PractitionerSignup />} />
-          <Route path="/practitioner/patients" element={<PractitionerPatients />} />
-          <Route path="/practitioner/patient/:id" element={<PractitionerPatientDetail />} />
+          <Route
+            path="/practitioner/patients"
+            element={<PractitionerPatients />}
+          />
+          <Route
+            path="/practitioner/patient/:id"
+            element={<PractitionerPatientDetail />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

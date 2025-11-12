@@ -18,7 +18,9 @@ interface AnalysisRecord {
 
 export default function PatientRecords() {
   const navigate = useNavigate();
-  const [selectedRecord, setSelectedRecord] = useState<AnalysisRecord | null>(null);
+  const [selectedRecord, setSelectedRecord] = useState<AnalysisRecord | null>(
+    null,
+  );
 
   // Mock data - replace with API call
   const records: AnalysisRecord[] = [
@@ -164,7 +166,8 @@ export default function PatientRecords() {
                 No Records Yet
               </h3>
               <p className="text-gray-500 font-dm">
-                Your AI analysis results will appear here once you submit data for analysis.
+                Your AI analysis results will appear here once you submit data
+                for analysis.
               </p>
             </div>
           )}
