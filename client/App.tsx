@@ -16,6 +16,8 @@ import DiagnosticResults from "./pages/DiagnosticResults";
 import Recommendations from "./pages/Recommendations";
 import PractitionerLogin from "./pages/PractitionerLogin";
 import PractitionerSignup from "./pages/PractitionerSignup";
+import PractitionerPatients from "./pages/PractitionerPatients";
+import PractitionerPatientDetail from "./pages/PractitionerPatientDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => (
           />
           <Route path="/practitioner/login" element={<PractitionerLogin />} />
           <Route path="/practitioner/signup" element={<PractitionerSignup />} />
+          <Route path="/practitioner/patients" element={<PractitionerPatients />} />
+          <Route path="/practitioner/patient/:id" element={<PractitionerPatientDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
