@@ -69,7 +69,7 @@ export default function PractitionerPatients() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[linear-gradient(135deg,#C9D4F4_0%,#ECEBFA_50%,#F5F2FD_100%)]">
       {/* Sidebar */}
       <Sidebar />
 
@@ -111,7 +111,7 @@ export default function PractitionerPatients() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-3">
-                        <div className="w-12 h-12 bg-lungsense-blue rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        <div className="w-12 h-12 bg-lungsense-blue-light rounded-full flex items-center justify-center text-white font-bold text-lg">
                           {patient.name[0]}
                         </div>
                         <div>
@@ -160,7 +160,7 @@ export default function PractitionerPatients() {
 
                     <Button
                       onClick={() => handleViewRecords(patient)}
-                      className="bg-lungsense-blue hover:bg-lungsense-blue/90 text-white font-display font-medium ml-4"
+                      className="bg-lungsense-blue-light hover:bg-lungsense-blue-light hover:opacity-90 transition-opacity text-white font-display font-medium ml-4"
                     >
                       <Eye className="w-4 h-4 mr-2" />
                       View Records

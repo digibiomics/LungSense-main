@@ -201,12 +201,17 @@ export default function PractitionerSignup() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="institutionLocation" className="text-xs uppercase tracking-wider text-gray-700 font-dm">I N S T I T U T I O N &nbsp; L O C A T I O N</Label>
+                <Label htmlFor="institutionLocation" className="text-xs uppercase tracking-wider text-gray-700 font-dm">I N S T I T U T I O N &nbsp;  L O C A T I O N</Label>
                 <Input id="institutionLocation" name="institutionLocation" type="text" placeholder="23 Simcoe St" value={formData.institutionLocation} onChange={handleChange} required />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-xs uppercase tracking-wider text-gray-700 font-dm">C R E A T E&nbsp;P A S S W O R D</Label>
+                <Label htmlFor="password" className="text-xs uppercase tracking-wider text-gray-700 font-dm">C R E A T E&nbsp;  P A S S W O R D</Label>
+                <Input id="password" name="password" type="password" placeholder="••••••" value={formData.password} onChange={handleChange} required />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="password" className="text-xs uppercase tracking-wider text-gray-700 font-dm">C O N F I R M&nbsp;  P A S S W O R D</Label>
                 <Input id="password" name="password" type="password" placeholder="••••••" value={formData.password} onChange={handleChange} required />
               </div>
 
@@ -232,7 +237,7 @@ export default function PractitionerSignup() {
                 </p>
               </div>
 
-              <Button type="submit" className="w-full bg-lungsense-blue text-white py-6 rounded-lg" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-lungsense-blue-light hover:bg-lungsense-blue-light hover:opacity-90 transition-opacity text-white font-display" disabled={isSubmitting}>
                 {isSubmitting ? "Signing up..." : "Sign Up"}
               </Button>
             </form>

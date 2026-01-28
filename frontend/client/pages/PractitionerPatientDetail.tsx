@@ -44,7 +44,7 @@ export default function PractitionerPatientDetail() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[linear-gradient(135deg,#C9D4F4_0%,#ECEBFA_50%,#F5F2FD_100%)]">
       {/* Sidebar */}
       <Sidebar />
 
@@ -126,7 +126,7 @@ export default function PractitionerPatientDetail() {
                   </div>
                 </div>
 
-                <Button className="w-full mt-6 bg-lungsense-blue hover:bg-lungsense-blue/90 text-white font-display">
+                <Button className="w-full mt-6 bg-lungsense-blue-light hover:bg-lungsense-blue-light hover:opacity-90 transition-opacity text-white font-display">
                   View Full AI Analysis Report
                 </Button>
               </Card>
@@ -188,7 +188,7 @@ export default function PractitionerPatientDetail() {
                   <Button
                     onClick={handleSaveFeedback}
                     disabled={!feedback.trim() || isSaving}
-                    className="w-full bg-lungsense-blue hover:bg-lungsense-blue/90 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-display font-semibold"
+                    className="w-full bg-lungsense-blue-light hover:bg-lungsense-blue-light hover:opacity-90 transition-opacity text-white font-display disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     {isSaving ? "Saving..." : "Submit Feedback"}
@@ -207,10 +207,10 @@ export default function PractitionerPatientDetail() {
                     {savedFeedback.map((note, idx) => (
                       <div
                         key={idx}
-                        className="p-4 bg-lungsense-blue-light rounded-lg"
+                        className="p-4 bg-gray-100 rounded-lg"
                       >
                         <p className="text-sm text-gray-700 font-dm">{note}</p>
-                        <p className="text-xs text-gray-500 mt-2 font-dm">
+                        <p className="text-xs text-gray-900 mt-2 font-dm">
                           Just now
                         </p>
                       </div>
