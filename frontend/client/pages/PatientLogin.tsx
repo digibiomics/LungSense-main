@@ -112,7 +112,7 @@ export default function PatientLogin() {
                 Don't have an account?{" "}
                 <Link
                   to="/patient/signup"
-                  className="text-lungsense-blue hover:underline font-medium"
+                  className="text-lungsense-blue hover:underline font-bold font-medium"
                 >
                   Sign Up here
                 </Link>

@@ -1,4 +1,4 @@
-// frontend/src/pages/PractitionerLogin.tsx
+/ frontend/src/pages/PractitionerLogin.tsx
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -138,7 +138,7 @@ export default function PractitionerLogin() {
 
               <Button
                 type="submit"
-                className="w-full bg-black hover:bg-gray-800 text-white font-bold font-display"
+                className="w-full bg-lungsense-blue-light hover:bg-lungsense-blue-light hover:opacity-90 transition-opacity text-white font-display"
                 size="lg"
                 disabled={isSubmitting}
                 aria-disabled={isSubmitting}
